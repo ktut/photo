@@ -27,7 +27,7 @@ export default [
     {   
         id: 5,
         url: 'https://ktut.github.io/portfolio/assets/photo/1100-westwick.jpg',
-        type: 'portrait', 
+        type: 'place', 
     },
     {   
         id: 6,
@@ -42,7 +42,7 @@ export default [
     {   
         id: 8,
         url: 'https://ktut.github.io/portfolio/assets/photo/miles-49-RAMZI-DREESSEN.jpg',
-        type: 'portrait', 
+        type: 'place', 
     },
     {   
         id: 9,
@@ -52,7 +52,7 @@ export default [
     {    
         id: 10,
         url: 'https://ktut.github.io/portfolio/assets/photo/E8A2046-WEB.jpg',
-        type: 'place', 
+        type: 'portrait', 
     },
     {   
         id: 11,
@@ -62,6 +62,6 @@ export default [
     {   
         id: 12,
         url: 'https://ktut.github.io/portfolio/assets/photo/lefty-3.jpg',
-        type: 'place', 
+        type: 'portrait', 
     },
 ];

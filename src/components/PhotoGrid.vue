@@ -47,7 +47,6 @@ export default {
 
 <template>
     <div>
-        {{ sortedPhotoArray }}
         <button v-on:click="filterPhotos">Filter</button>
         <Photoswipe v-bind:class="template" name="cell" is="transition-group">
             <div class="cell photoswipe-image"
