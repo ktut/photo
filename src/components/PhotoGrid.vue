@@ -51,7 +51,8 @@ export default {
         <Photoswipe v-bind:class="template" name="cell" is="transition-group">
             <div class="cell photoswipe-image"
                 v-for="photo in sortedPhotoArray"
-                v-bind:key="photo.id">
+                v-bind:key="photo.id"
+                v-bind:style="photo.style">
                 <img
                     v-bind:data-pswp-src="photo.url"
                     v-bind:src="photo.url"

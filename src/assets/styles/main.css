@@ -1,15 +1,16 @@
 .photoswipe-gallery {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    grid-template-columns: repeat(8, 100px);
+    grid-auto-rows: auto;
     grid-auto-flow: dense;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.photoswipe-image {
-    flex: 0 1 200px;
-}
+/* .photoswipe-image {
+} */
 
 .photoswipe-image:hover {
     cursor: pointer;
