@@ -1,5 +1,8 @@
 <script>
+require('@/assets/styles/reset.css');
 require('@/assets/styles/main.css');
+
+import photos from './data/photos';
 
 export default {
   name: 'app',
