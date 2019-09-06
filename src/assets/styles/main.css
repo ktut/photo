@@ -49,9 +49,13 @@
     opacity: 1;
 }
 
-/* .cell-leave {
-    max-width: 200px;
-} */
+.cell-leave {
+    opacity: 1;
+}
+
+.cell-leave-to {
+    opacity: 0;
+}
 
 .cell-leave-active {
     opacity: 0;
