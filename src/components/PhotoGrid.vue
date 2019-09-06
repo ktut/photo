@@ -25,19 +25,37 @@ export default {
             default: 'photoswipe-gallery',
         },
     },
+    data() {
+        return {
+            activeFilter: '',
+            sortedPhotoArray: this.photos,
+        }
+    },
+    methods: {
+        filterPhotos() {
+            if (this.activeFilter === '') {
+                this.activeFilter = 'place';
+                this.sortedPhotoArray = this.photos.filter(photo => photo.type === this.activeFilter);
+            } else {
+                this.activeFilter = '';
+                this.sortedPhotoArray = this.photos;
+            }
+        }
+    }
 }
 </script>
 
 <template>
     <div>
+        {{ sortedPhotoArray }}
+        <button v-on:click="filterPhotos">Filter</button>
         <Photoswipe v-bind:class="template" name="cell" is="transition-group">
-            <div class="photoswipe-image"
-                v-for="photo in photos"
-                :key="photo.id">
+            <div class="cell photoswipe-image"
+                v-for="photo in sortedPhotoArray"
+                v-bind:key="photo.id">
                 <img
-                    :data-src="photo.url"
-                    :data-pswp-src="photo.url"
-                    class="lazy"
+                    v-bind:data-pswp-src="photo.url"
+                    v-bind:src="photo.url"
                 />
             </div>
         </Photoswipe>

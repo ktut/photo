@@ -1,7 +1,10 @@
 .photoswipe-gallery {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: dense;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .photoswipe-image {
@@ -23,6 +26,20 @@
     opacity: 0;
 }
 
-.cell-move {
-  transition: transform 1s;
+.cell {
+    transition: all 1s;
+}
+
+/* .cell-move {
+    transition: transform 1s ease;
+} */
+
+.cell-enter-active {
+    opacity: 1;
+}
+
+.cell-leave-active {
+    opacity: 0;
+    position: absolute;
+    max-width: 200px;
 }
