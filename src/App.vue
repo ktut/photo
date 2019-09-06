@@ -4,6 +4,7 @@ require('@/assets/styles/main.css');
 
 import photos from './data/photos';
 import PhotoGrid from './components/PhotoGrid';
+import LazyLoad from "vanilla-lazyload";
 
 export default {
   name: 'app',
@@ -15,6 +16,12 @@ export default {
   components: {
     PhotoGrid
   },
+  mounted() {
+    const lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+    });
+    lazyLoadInstance.update();
+  }
 }
 </script>
 
