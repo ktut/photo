@@ -34,7 +34,11 @@
     transition: transform 0.5s ease;
 } */
 
-.cell-enter-active {
+.cell-enter {
+    opacity: 0;
+}
+
+.cell-enter-to {
     opacity: 1;
 }
 
