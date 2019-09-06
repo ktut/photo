@@ -52,11 +52,11 @@ export default {
             <div class="cell photoswipe-image"
                 v-for="photo in sortedPhotoArray"
                 v-bind:key="photo.id"
-                v-bind:style="photo.style">
-                <img
+                v-bind:style="`${photo.style}; background-image: url('${photo.url}');`">
+                <!-- <img
                     v-bind:data-pswp-src="photo.url"
                     v-bind:src="photo.url"
-                />
+                /> -->
             </div>
         </Photoswipe>
     </div>

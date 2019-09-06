@@ -2,21 +2,24 @@
     position: relative;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(8, 100px);
+    grid-template-columns: repeat(8, 10vw);
     grid-auto-rows: auto;
     grid-auto-flow: dense;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* .photoswipe-image {
-} */
+.photoswipe-image {
+    width: 100%;
+    height: 10vw;
+    background-size: cover;
+    background-position: 50% 35%;
+}
 
 .photoswipe-image:hover {
     cursor: pointer;
 }
 
-.photoswipe-image:nth-of-type(even) {
+/* .photoswipe-image:nth-of-type(even) {
     background-color: #333;
 }
 
@@ -29,7 +32,7 @@
     height: auto;
 
     opacity: 0;
-}
+} */
 
 .cell {
     transition: all 0.5s ease-in-out;
@@ -47,8 +50,12 @@
     opacity: 1;
 }
 
+/* .cell-leave {
+    max-width: 200px;
+} */
+
 .cell-leave-active {
     opacity: 0;
     position: absolute;
-    max-width: 200px;
+    max-width: 100px;
 }
