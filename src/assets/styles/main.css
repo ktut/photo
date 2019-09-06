@@ -27,11 +27,11 @@
 }
 
 .cell {
-    transition: all 1s;
+    transition: all 0.5s ease-in-out;
 }
 
 /* .cell-move {
-    transition: transform 1s ease;
+    transition: transform 0.5s ease;
 } */
 
 .cell-enter-active {
