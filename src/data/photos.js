@@ -33,7 +33,7 @@ export default [
         id: 5,
         url: 'https://ktut.github.io/portfolio/assets/photo/1100-westwick.jpg',
         type: 'place',
-        style: 'grid-column-end: span 3; grid-row-end: span 2;' 
+        style: 'grid-column-end: span 4; grid-row-end: span 3;' 
     },
     {   
         id: 6,
@@ -51,7 +51,7 @@ export default [
         id: 8,
         url: 'https://ktut.github.io/portfolio/assets/photo/miles-49-RAMZI-DREESSEN.jpg',
         type: 'place',
-        style: 'grid-column-end: span 3; grid-row-end: span 2;' 
+        style: 'grid-column-end: span 4; grid-row-end: span 3;' 
     },
     {   
         id: 9,
@@ -69,7 +69,7 @@ export default [
         id: 11,
         url: 'https://ktut.github.io/portfolio/assets/photo/IMG-365.jpg',
         type: 'place',
-        style: 'grid-column-end: span 3; grid-row-end: span 2;' 
+        style: 'grid-column-end: span 4; grid-row-end: span 3;' 
     },
     {   
         id: 12,

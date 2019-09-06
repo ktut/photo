@@ -3,14 +3,13 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(8, 10vw);
-    grid-auto-rows: auto;
+    grid-auto-rows: 10vw;
     grid-auto-flow: dense;
     margin: 0 auto;
 }
 
 .photoswipe-image {
     width: 100%;
-    height: 10vw;
     background-size: cover;
     background-position: 50% 35%;
 }
@@ -57,5 +56,5 @@
 .cell-leave-active {
     opacity: 0;
     position: absolute;
-    max-width: 100px;
+    max-width: 20vw;
 }
