@@ -1,11 +1,11 @@
 .photoswipe-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
 }
 
 .photoswipe-image {
-    flex: 0 1 300px;
+    flex: 0 1 200px;
 }
 
 .photoswipe-image:nth-of-type(even) {
@@ -21,4 +21,8 @@
     height: auto;
 
     opacity: 0;
+}
+
+.cell-move {
+  transition: transform 1s;
 }

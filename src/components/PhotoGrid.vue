@@ -30,13 +30,13 @@ export default {
 
 <template>
     <div>
-        <Photoswipe v-bind:class="template">
+        <Photoswipe v-bind:class="template" name="cell" is="transition-group">
             <div class="photoswipe-image"
-                v-for="(src, index) in photos"
-                :key="index">
+                v-for="photo in photos"
+                :key="photo.id">
                 <img
-                    :data-src="src"
-                    :data-pswp-src="src"
+                    :data-src="photo.url"
+                    :data-pswp-src="photo.url"
                     class="lazy"
                 />
             </div>
