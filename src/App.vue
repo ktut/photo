@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       photos: photos,
+      filter: '',
     }
   },
   components: {
@@ -27,6 +28,12 @@ export default {
 
 <template>
   <div id="app">
-    <PhotoGrid v-bind:photos="photos"></PhotoGrid>
+    <button v-on:click="filter = 'people'">People</button>
+    <button v-on:click="filter = 'places'">Places</button>
+    {{ filter }}
+    <PhotoGrid 
+      v-bind:photos="photos" 
+      v-bind:filter="filter"
+    ></PhotoGrid>
   </div>
 </template>
