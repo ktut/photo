@@ -101,7 +101,7 @@ export default [
     },
     {   
         id: 16,
-        url: 'hhttps://images.squarespace-cdn.com/content/54318df1e4b067871dac78e3/1435362748340-JMC0KLNYSCFNI6HQNTVN/Inside-14.jpg?format=1000w&content-type=image%2Fjpeg',
+        url: 'https://images.squarespace-cdn.com/content/54318df1e4b067871dac78e3/1435362748340-JMC0KLNYSCFNI6HQNTVN/Inside-14.jpg?format=1000w&content-type=image%2Fjpeg',
         type: 'places',
         style: 'grid-row-end: span 2; background-position: 50% 100%;' 
     },

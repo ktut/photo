@@ -28,6 +28,7 @@ export default {
 
 <template>
   <div id="app">
+    <button v-on:click="filter = ''">All</button>
     <button v-on:click="filter = 'people'">People</button>
     <button v-on:click="filter = 'places'">Places</button>
     {{ filter }}
