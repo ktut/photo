@@ -10,7 +10,7 @@ export default {
   name: 'app',
   data() {
     return {
-      photos: photos,
+      photos: photos.sort(() => Math.random() - 0.5),
       filter: '',
     }
   },
