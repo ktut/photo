@@ -28,10 +28,23 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="filter = ''">All</button>
-    <button v-on:click="filter = 'people'">People</button>
-    <button v-on:click="filter = 'places'">Places</button>
-    {{ filter }}
+    <nav>
+      <button 
+         v-bind:class="{ active: filter === '' }"
+         v-on:click="filter = ''">
+        All
+      </button>
+      <button 
+         v-bind:class="{ active: filter === 'people' }"
+         v-on:click="filter = 'people'">
+        People
+      </button>
+      <button 
+         v-bind:class="{ active: filter === 'places' }"
+         v-on:click="filter = 'places'">
+        Places
+      </button>
+    </nav>
     <PhotoGrid 
       v-bind:photos="photos" 
       v-bind:filter="filter"
