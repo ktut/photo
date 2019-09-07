@@ -35,7 +35,7 @@ export default {
             if (this.filter === '') {
                 return this.photos;
             } else {
-                return this.photos.filter(photo => photo.type === this.filter)
+                return this.photos.filter(photo => photo.type === this.filter);
             }
         }
     },

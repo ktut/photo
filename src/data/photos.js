@@ -2,7 +2,7 @@ export default [
     {   
         id: 0,
         url: 'https://ktut.github.io/portfolio/assets/photo/ruffalo-1.jpg',
-        type: 'places',
+        type: 'people',
         style: 'grid-row-end: span 2;' 
     },
     {   
@@ -15,7 +15,7 @@ export default [
         id: 2,
         url: 'https://ktut.github.io/portfolio/assets/photo/will-1100.jpg',
         type: 'people',
-        style: 'grid-row-end: span 2;' 
+        style: 'grid-column-end: span 2; grid-row-end: span 4' 
     },
     {   
         id: 3,
@@ -37,20 +37,20 @@ export default [
     },
     {   
         id: 6,
-        url: 'https://ktut.github.io/portfolio/assets/photo/PhotoJ-RKD-1.jpg',
-        type: 'people',
-        style: 'grid-column-end: span 2; background-position: 50% 30%;' 
-    },
-    {   
-        id: 7,
         url: 'https://ktut.github.io/portfolio/assets/photo/00-aless.jpg',
         type: 'people',
         style: 'grid-row-end: span 2;' 
     },
     {   
+        id: 7,
+        url: 'https://ktut.github.io/portfolio/assets/photo/PhotoJ-RKD-1.jpg',
+        type: 'people',
+        style: 'grid-column-end: span 2; grid-row-end: span 2; background-position: 50% 30%;' 
+    },
+    {   
         id: 8,
         url: 'https://ktut.github.io/portfolio/assets/photo/miles-49-RAMZI-DREESSEN.jpg',
-        type: 'places',
+        type: 'people',
         style: 'grid-row-end: span 2;' 
     },
     {   
@@ -68,13 +68,13 @@ export default [
     {   
         id: 11,
         url: 'https://ktut.github.io/portfolio/assets/photo/IMG-365.jpg',
-        type: 'places',
-        style: 'grid-row-end: span 2;' 
+        type: 'people',
+        style: 'grid-column-end: span 2; grid-row-end: span 4' 
     },
     {   
         id: 12,
         url: 'https://ktut.github.io/portfolio/assets/photo/lefty-3.jpg',
-        type: 'places',
+        type: 'people',
         style: 'grid-row-end: span 2;' 
     },
 ];
