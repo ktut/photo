@@ -2,52 +2,46 @@
 require('@/assets/styles/reset.css');
 require('@/assets/styles/main.css');
 
-import photos from './data/photos';
-import PhotoGrid from './components/PhotoGrid';
+import Vue from 'vue';
+import Router from 'vue-router';
 // import LazyLoad from "vanilla-lazyload";
+ 
+Vue.use(Router);
 
 export default {
   name: 'app',
   data() {
     return {
-      photos: photos.sort(() => Math.random() - 0.5),
       filter: '',
+      transitionName: '',
     }
   },
-  components: {
-    PhotoGrid
+  computed: {
   },
   mounted() {
     // const lazyLoadInstance = new LazyLoad({
     //     elements_selector: ".lazy"
     // });
     // lazyLoadInstance.update();
-  }
+  },
+  watch: {
+    $route(to, from) {
+      this.transitionName = to.meta.page > from.meta.page ? "next" : "prev";
+    }
+  },
 }
 </script>
 
 <template>
   <div id="app">
     <nav>
-      <button 
-         v-bind:class="{ active: filter === '' }"
-         v-on:click="filter = ''">
-        All
-      </button>
-      <button 
-         v-bind:class="{ active: filter === 'people' }"
-         v-on:click="filter = 'people'">
-        People
-      </button>
-      <button 
-         v-bind:class="{ active: filter === 'places' }"
-         v-on:click="filter = 'places'">
-        Places
-      </button>
+      <router-link :to="{name: 'Home'}">Home</router-link>
+      <router-link :to="{name: 'About'}">About</router-link>
     </nav>
-    <PhotoGrid 
-      v-bind:photos="photos" 
-      v-bind:filter="filter"
-    ></PhotoGrid>
+    <main>
+      <transition v-bind:name="transitionName">
+        <router-view/>
+      </transition>
+    </main>
   </div>
 </template>

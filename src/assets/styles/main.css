@@ -43,20 +43,14 @@ nav button.active {
     }
 }
 
-/* .photoswipe-image:nth-of-type(even) {
-    background-color: #333;
-}
-
-.photoswipe-image:nth-of-type(odd) {
-    background-color: #777;
-}
-
 .photoswipe-image img {
     width: 100%;
     height: auto;
 
     opacity: 0;
 } */
+
+/* TRANSITIONS */
 
 .cell {
     transition: all 0.5s ease-in-out;
@@ -86,4 +80,72 @@ nav button.active {
     opacity: 0;
     position: absolute;
     max-width: 200px;
+}
+
+/* page router transitions */
+
+.next-right-enter-active,
+.next-right-leave-active,
+.next-left-enter-active,
+.next-left-leave-active,
+.prev-right-enter-active,
+.prev-right-leave-active,
+.prev-left-enter-active,
+.prev-left-leave-active {
+  will-change: transform;
+  transition: all 500ms;
+  position: absolute;
+}
+
+.next-leave-to {
+    animation: leaveToLeft 500ms both ease;
+}
+
+.next-enter-to {
+    animation: enterFromRight 500ms both ease;
+}
+
+.prev-leave-to {
+    animation: leaveToRight 500ms both ease;
+    position: absolute;
+}
+
+.prev-enter-to {
+    animation: enterFromLeft 500ms both ease;
+}
+
+@keyframes leaveToLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes enterFromLeft {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes leaveToRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes enterFromRight {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
 }

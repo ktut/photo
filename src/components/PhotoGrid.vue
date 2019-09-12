@@ -7,7 +7,7 @@ const options = {
             tapToClose: true,
             shareEl: false,
             fullscreenEl: false,
-            preload: [0,1],
+            preload: [1,2],
         };
 Vue.use(Photoswipe, options);
 
@@ -18,11 +18,6 @@ export default {
             type: Array,
             required: true,
             default: () => [],
-        },
-        template: {
-            type: String,
-            required: false,
-            default: 'photoswipe-gallery',
         },
         filter: {
             type: String,
@@ -44,8 +39,8 @@ export default {
 
 <template>
     <div>
-        <Photoswipe v-bind:class="template" name="cell" is="transition-group">
-            <div class="cell photoswipe-image"
+        <Photoswipe class="photoswipe-gallery" name="cell" is="transition-group">
+            <div v-bind:class="`${photo.class} cell photoswipe-image`"
                 v-for="photo in sortedPhotoArray"
                 v-bind:key="photo.id"
                 v-bind:data-pswp-src="photo.url"
@@ -58,3 +53,23 @@ export default {
         </Photoswipe>
     </div>
 </template>
+
+<style scoped>
+/* temporary style override to hide all images in grid */
+/* .photoswipe-image {
+    background-image: none !important;
+    background-color: #333;
+}
+
+.photoswipe-image:nth-of-type(2n) {
+    background-color: #555;
+}
+
+.photoswipe-image:nth-of-type(3n) {
+    background-color: #777;
+}
+
+.photoswipe-image:nth-of-type(5n) {
+    background-color: #999;
+} */
+</style>
