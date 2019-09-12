@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     photos() {
-      return people.concat(places);
+      return (people.concat(places)).sort(() => Math.random() - 0.5);
       // use .sort(() => Math.random() - 0.5); to shuffle array if you want
     }
   },

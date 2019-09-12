@@ -56,23 +56,27 @@ nav button.active {
     transition: all 0.5s ease-in-out;
 }
 
-/* .cell-move {
+.cell-move {
     transition: transform 0.5s ease;
-} */
+}
 
 .cell-enter {
+    transition: all 0.5s ease-in-out;
     opacity: 0;
 }
 
 .cell-enter-to {
+    transition: all 0.5s ease-in-out;
     opacity: 1;
 }
 
 .cell-leave {
+    transition: all 0.5s ease-in-out;
     opacity: 1;
 }
 
 .cell-leave-to {
+    transition: all 0.5s ease-in-out;
     opacity: 0;
 }
 
