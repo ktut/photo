@@ -37,7 +37,7 @@ html {
 
 #app {
     min-height: 100vh;
-    background: #777;
+    background: #333;
 }
 
 h1,
@@ -79,11 +79,13 @@ p a {
 .container {
     max-width: 600px;
     margin: 0 auto;
+    padding: 10px;
 }
 
 .container p {
-    line-height: 120%;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 130%;
+    margin-bottom: 25px;
     color: #ddd;
 }
 
@@ -126,14 +128,23 @@ h1,
     margin: 0 auto;
 }
 
+.photoswipe-image:hover {
+    cursor: pointer;
+}
+
 .photoswipe-image {
     width: 100%;
     background-size: cover;
-    background-position: 50% 0%;
+    background-position: 50% 0%;grid-row-end: span 2;
 }
 
-.photoswipe-image:hover {
-    cursor: pointer;
+.photoswipe-image.wide {
+    grid-column-end: span 2; 
+}
+
+.photoswipe-image.large {
+    grid-column-end: span 2; 
+    grid-row-end: span 4
 }
 
 @media (max-width: 375px) {
@@ -145,6 +156,15 @@ h1,
     .photoswipe-image {
         grid-column-end: span 1 !important;
         grid-row-end: span 1 !important;
+    }
+
+    .photoswipe-image.wide {
+        grid-column-end: span 2 !important; 
+    }
+
+    .photoswipe-image.large {
+        grid-column-end: span 2 !important; 
+        grid-row-end: span 2 !important;
     }
 
     h1 {
