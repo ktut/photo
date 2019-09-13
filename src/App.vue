@@ -34,9 +34,14 @@ export default {
 
 <template>
   <div id="app">
-    <nav>
-      <router-link :to="{name: 'Home'}">Home</router-link>
-      <router-link :to="{name: 'About'}">About</router-link>
+    <nav style="padding-top: 15px;">
+      <router-link :to="{name: 'Home'}" style="text-decoration: none !important;">
+        <h1 class="title">
+          RKDVISUALS
+        </h1>
+      </router-link>
+      <router-link :to="{name: 'Home'}" class="nav-button" style="margin-left: auto; margin-right: 15px;">Home</router-link>
+      <router-link :to="{name: 'About'}" class="nav-button">About</router-link>
     </nav>
     <main>
       <transition v-bind:name="transitionName">

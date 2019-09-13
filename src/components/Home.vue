@@ -1,6 +1,6 @@
 <script>
 import PhotoGrid from './PhotoGrid';
-// import LazyLoad from "vanilla-lazyload";
+import LazyLoad from "vanilla-lazyload";
 
 import people from '../data/people';
 import places from '../data/places';
@@ -22,10 +22,10 @@ export default {
     }
   },
   mounted() {
-    // const lazyLoadInstance = new LazyLoad({
-    //     elements_selector: ".lazy"
-    // });
-    // lazyLoadInstance.update();
+    const lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+    });
+    lazyLoadInstance.update();
   }
 }
 
@@ -33,22 +33,25 @@ export default {
 
 <template>
     <div>
-        <nav>
-            <button 
-                v-bind:class="{ active: filter === '' }"
-                v-on:click="filter = ''">
-                All
-            </button>
-            <button 
-                v-bind:class="{ active: filter === 'people' }"
-                v-on:click="filter = 'people'">
-                People
-            </button>
-            <button 
-                v-bind:class="{ active: filter === 'places' }"
-                v-on:click="filter = 'places'">
-                Places
-            </button>
+        <nav style="padding-bottom: 15px;">
+            <a
+              class="nav-button" 
+              v-bind:class="{ active: filter === '' }"
+              v-on:click="filter = ''">
+              All
+            </a>
+            <a
+              class="nav-button" 
+              v-bind:class="{ active: filter === 'people' }"
+              v-on:click="filter = 'people'">
+              People
+            </a>
+            <a
+              class="nav-button" 
+              v-bind:class="{ active: filter === 'places' }"
+              v-on:click="filter = 'places'">
+              Places
+            </a>
         </nav>
         <PhotoGrid 
         v-bind:photos="photos" 

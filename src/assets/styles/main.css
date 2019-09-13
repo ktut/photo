@@ -1,13 +1,118 @@
+/* FONTS */
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-family: neue-haas-grotesk-display, sans-serif !important;
+    font-display: swap;
+}
+
+ul,
+li,
+p,
+p em,
+p a,
+button,
+:before,
+nav a,
+.pswp__counter,
+.tooltip {
+    font-family: proxima-nova, sans-serif !important;
+    font-display: swap;
+}
+
+/* BASE FONT SIZE */
+html {
+    font-size: 17.5px;
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 15.5px;
+    }
+}
+
+#app {
+    min-height: 100vh;
+    background: #777;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #ddd;
+}
+
+h1 {
+    font-size: 1.6rem;
+    letter-spacing: 5px;
+    line-height: 100%;
+    margin-bottom: 1px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 130%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+p a {
+    color: white;
+}
+
+/* LAYOUT */
+
+/* #app {
+    background: #333;
+} */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.container p {
+    line-height: 120%;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
 nav {
     display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
-nav button {
-    font-size: 1.2rem;
+.nav-button {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #ddd;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-nav button.active {
+.nav-button.active {
     text-decoration: underline;
+}
+
+.nav-button:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+h1,
+.nav-button {
+    transition: all 0.4s;
 }
 
 
@@ -40,6 +145,19 @@ nav button.active {
     .photoswipe-image {
         grid-column-end: span 1 !important;
         grid-row-end: span 1 !important;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav-button {
+        font-size: 0.7rem;
+        margin: 0 !important;
     }
 }
 
@@ -96,7 +214,9 @@ nav button.active {
 .prev-right-leave-active,
 .prev-left-enter-active,
 .prev-left-leave-active {
-  will-change: transform;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    will-change: transform, opacity;
   transition: all 500ms;
   position: absolute;
 }
@@ -109,6 +229,10 @@ nav button.active {
     animation: enterFromRight 500ms both ease;
 }
 
+/* .prev-leave {
+    position: absolute;
+} */
+
 .prev-leave-to {
     animation: leaveToRight 500ms both ease;
     position: absolute;
@@ -116,6 +240,7 @@ nav button.active {
 
 .prev-enter-to {
     animation: enterFromLeft 500ms both ease;
+    position: absolute;
 }
 
 @keyframes leaveToLeft {

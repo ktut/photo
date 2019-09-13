@@ -40,7 +40,7 @@ export default {
 <template>
     <div>
         <Photoswipe class="photoswipe-gallery" name="cell" is="transition-group">
-            <div v-bind:class="`${photo.class} cell photoswipe-image`"
+            <div v-bind:class="`${photo.class} cell photoswipe-image lazy`"
                 v-for="photo in sortedPhotoArray"
                 v-bind:key="photo.id"
                 v-bind:data-pswp-src="photo.url"
