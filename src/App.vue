@@ -35,7 +35,7 @@ export default {
 <template>
   <div id="app">
     <nav style="padding-top: 15px; justify-content: space-between;">
-      <router-link :to="{name: 'Home'}" style="text-decoration: none !important;">
+      <router-link :to="{name: 'Home'}" style="text-decoration: none !important;" class="title-link">
         <h1 class="title">
           RKDVISUALS
         </h1>

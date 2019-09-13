@@ -48,8 +48,8 @@ h2 {
 }
 
 h1 {
-    font-size: 1.6rem;
-    letter-spacing: 5px;
+    font-size: 1.4rem;
+    letter-spacing: 10px;
     line-height: 100%;
     margin-bottom: 1px;
 }
@@ -78,7 +78,7 @@ p a {
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 10px;
 }
 
@@ -92,16 +92,20 @@ p a {
 nav {
     display: flex;
     align-items: center;
-    padding: 10px 14px;
+    padding: 10px 12px;
 }
 
 .nav-button {
-    font-size: 1rem;
+    font-size: 0.9rem;
     letter-spacing: 3px;
     font-weight: 700;
     color: #ddd;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.nav-button:hover {
+    cursor: pointer;
 }
 
 .nav-button.active {
@@ -147,7 +151,14 @@ h1,
     grid-row-end: span 4
 }
 
-@media (max-width: 375px) {
+@media (min-width: 600px) {
+    .title-link {
+        transition: transform 0.4s;
+        transform: translate(18px, 18px);
+    }
+}
+
+@media (max-width: 450px) {
     .photoswipe-gallery {
         grid-template-columns: 1fr 1fr 1fr;   
         grid-auto-rows: 175px; 
