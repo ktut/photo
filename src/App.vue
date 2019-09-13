@@ -34,14 +34,13 @@ export default {
 
 <template>
   <div id="app">
-    <nav style="padding-top: 15px;">
+    <nav style="padding-top: 15px; justify-content: space-between;">
       <router-link :to="{name: 'Home'}" style="text-decoration: none !important;">
         <h1 class="title">
           RKDVISUALS
         </h1>
       </router-link>
-      <router-link :to="{name: 'Home'}" class="nav-button" style="margin-left: auto; margin-right: 15px;">Home</router-link>
-      <router-link :to="{name: 'About'}" class="nav-button">About</router-link>
+      <router-link :to="{name: 'Contact'}" class="nav-button">Contact</router-link>
     </nav>
     <main>
       <transition v-bind:name="transitionName">

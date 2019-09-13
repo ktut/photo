@@ -92,7 +92,7 @@ p a {
 nav {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 14px;
 }
 
 .nav-button {
@@ -171,8 +171,8 @@ h1,
         font-size: 1.2rem;
     }
 
-    nav {
-        justify-content: space-between;
+    .photonav {
+        justify-content: space-between !important;
     }
 
     .nav-button {

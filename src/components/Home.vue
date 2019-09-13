@@ -33,7 +33,7 @@ export default {
 
 <template>
     <div>
-        <nav style="padding-bottom: 15px;">
+        <nav class="photonav" style="padding-bottom: 15px; justify-content: flex-end;">
             <a
               class="nav-button" 
               v-bind:class="{ active: filter === '' }"
