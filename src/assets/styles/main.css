@@ -38,6 +38,7 @@ html {
 #app {
     min-height: 100vh;
     background: #333;
+    overflow-x: hidden;
 }
 
 h1,
@@ -77,13 +78,12 @@ p a {
 } */
 
 .container {
-    max-width: 600px;
+    max-width: 520px;
     margin: 40px auto;
     padding: 10px;
 }
 
 .container p {
-    font-size: 1.2rem;
     line-height: 130%;
     margin-bottom: 25px;
     color: #ddd;

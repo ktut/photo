@@ -39,7 +39,7 @@ export default {
 
 <template>
     <div>
-        <Photoswipe class="photoswipe-gallery" name="cell" is="transition-group">
+        <Photoswipe class="photoswipe-gallery" name="cell" is="transition-group" style="overflow-y: hidden;">
             <div v-bind:class="`${photo.class} cell photoswipe-image lazy`"
                 v-for="photo in sortedPhotoArray"
                 v-bind:key="photo.id"
