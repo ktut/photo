@@ -96,6 +96,10 @@ nav {
     padding: 10px 12px;
 }
 
+.photonav {
+    background: linear-gradient(to bottom, #333 0%,#222 100%);
+}
+
 .nav-button {
     font-size: 0.9rem;
     letter-spacing: 3px;
@@ -117,11 +121,6 @@ nav {
 h1,
 .nav-button {
     transition: all 0.4s;
-}
-
-.title-link {
-    transition: transform 0.4s;
-    transform: translate(0px, 0px);
 }
 
 
@@ -154,11 +153,11 @@ h1,
     grid-row-end: span 4
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .title-link {
         transform: translate(18px, 18px);
     }
-}
+} */
 
 @media (max-width: 767px) {
     .photoswipe-gallery {
