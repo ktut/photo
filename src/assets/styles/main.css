@@ -97,7 +97,9 @@ nav {
 }
 
 .photonav {
+    padding-top: 15px;
     background: linear-gradient(to bottom, #333 0%,#222 100%);
+    border-top: 1px solid #555;
 }
 
 .nav-button {
