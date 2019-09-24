@@ -79,6 +79,7 @@ p a {
 
 .container {
     max-width: 520px;
+    min-height: 100vh;
     margin: 40px auto;
     padding: 10px;
 }
@@ -102,6 +103,7 @@ nav {
     color: #ddd;
     text-transform: uppercase;
     text-decoration: none;
+    margin: 0 15px;
 }
 
 .nav-button:hover {
@@ -110,10 +112,6 @@ nav {
 
 .nav-button.active {
     text-decoration: underline;
-}
-
-.nav-button:not(:last-of-type) {
-    margin-right: 15px;
 }
 
 h1,
@@ -275,7 +273,7 @@ h1,
 
 .prev-enter-to {
     animation: enterFromLeft 500ms both ease;
-    position: absolute;
+    /* position: absolute; */
 }
 
 @keyframes leaveToLeft {
