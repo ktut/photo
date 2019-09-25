@@ -6,7 +6,7 @@ import people from '../data/people';
 import places from '../data/places';
 
 export default {
-    name: 'Home',
+    name: 'Photo',
     data() {
     return {
       filter: '',

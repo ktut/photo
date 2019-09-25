@@ -80,7 +80,7 @@ p a {
 .container {
     max-width: 520px;
     min-height: 100vh;
-    margin: 40px auto;
+    margin: 10px auto;
     padding: 10px;
 }
 
@@ -88,6 +88,28 @@ p a {
     line-height: 130%;
     margin-bottom: 25px;
     color: #ddd;
+}
+
+.container > iframe.video {
+
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+    margin-bottom: 40px;
+} 
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
 }
 
 nav {
@@ -182,7 +204,7 @@ h1,
     }
 
     h1 {
-        font-size: 1.2rem;
+        font-size: 0.6rem;
     }
 
     .photonav {
@@ -256,25 +278,24 @@ h1,
 }
 
 .next-leave-to {
-    animation: leaveToLeft 500ms both ease;
+  animation: leaveToLeft 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 0;
 }
 
 .next-enter-to {
-    animation: enterFromRight 500ms both ease;
+  animation: enterFromRight 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
 }
 
-/* .prev-leave {
-    position: absolute;
-} */
-
 .prev-leave-to {
-    animation: leaveToRight 500ms both ease;
-    position: absolute;
+  animation: leaveToRight 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+  position: absolute;
 }
 
 .prev-enter-to {
-    animation: enterFromLeft 500ms both ease;
-    /* position: absolute; */
+  animation: enterFromLeft 500ms both cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 0;
 }
 
 @keyframes leaveToLeft {
