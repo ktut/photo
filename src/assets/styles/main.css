@@ -115,7 +115,7 @@ p a {
 nav {
     display: flex;
     align-items: center;
-    padding: 10px 12px;
+    padding: 15px;
 }
 
 .photonav {

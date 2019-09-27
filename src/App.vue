@@ -25,7 +25,7 @@ export default {
 
 <template>
   <div id="app">
-    <nav style="padding-top: 20px; padding-bottom: 15px; justify-content: space-between;">
+    <nav style="justify-content: space-between;">
       <div class="title-link">
         <h1 class="title">
           RKDVISUALS
