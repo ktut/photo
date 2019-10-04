@@ -4,6 +4,7 @@ import LazyLoad from "vanilla-lazyload";
 
 import people from '../data/people';
 import places from '../data/places';
+import extraphotos from '../data/extraphotos';
 
 export default {
     name: 'Photo',
@@ -17,8 +18,14 @@ export default {
   },
   computed: {
     photos() {
-      return (people.concat(places)).sort(() => Math.random() - 0.5);
-      // use .sort(() => Math.random() - 0.5); to shuffle array if you want
+      return (
+        (
+        people.concat(places))
+        .sort(() => Math.random() - 0.5
+        ).concat(extraphotos)
+      );
+      // top of order is randomly sorted, then the rest of the photos are appened
+      // .sort(() => Math.random() - 0.5); shuffles array
     }
   },
   mounted() {
