@@ -20,11 +20,12 @@ export default {
     photos() {
       return (
         (
-        people.concat(places))
-        .sort(() => Math.random() - 0.5
-        ).concat(extraphotos)
+        people
+        .concat(places))
+        .sort(() => Math.random() - 0.5)
+        .concat(extraphotos.sort(() => Math.random() - 0.5))
       );
-      // top of order is randomly sorted, then the rest of the photos are appened
+      // take people, add places, shuffle those, then add shuffled extra photos,
       // .sort(() => Math.random() - 0.5); shuffles array
     }
   },

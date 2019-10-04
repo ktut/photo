@@ -231,6 +231,11 @@ h1,
         grid-row-end: span 2 !important;
     }
 
+    .photoswipe-image.mobilefullwidth {
+        grid-column-end: span 3 !important; 
+        grid-row-end: span 1 !important;
+    }
+
     h1 {
         font-size: 0.8rem;
     }

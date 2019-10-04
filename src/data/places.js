@@ -33,8 +33,8 @@ export default [
         id: 17,
         url: 'https://images.squarespace-cdn.com/content/54318df1e4b067871dac78e3/1459201804015-SZ1Y4Y8DNAESPIJ3WEKG/avant-interior.jpg?format=1500w&content-type=image%2Fjpeg',
         type: 'places',
-        class: 'wide',
-        style: 'background-position: 50% 50%;' 
+        class: 'wide mobilefullwidth',
+        style: 'background-position: 50% 75%;' 
     },
     {   
         id: 18,

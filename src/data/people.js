@@ -42,7 +42,6 @@ export default [
         id: 7,
         url: 'https://ktut.github.io/portfolio/assets/photo/PhotoJ-RKD-1.jpg',
         type: 'people',
-        class: 'testClass',
         style: 'grid-column-end: span 2; grid-row-end: span 2; background-position: 50% 30%;' 
     },
     {   
@@ -59,6 +58,7 @@ export default [
         id: 10,
         url: 'https://ktut.github.io/portfolio/assets/photo/E8A2046-WEB.jpg',
         type: 'people',
+        style: 'background-position: 30% 80%;'
     },
     {   
         id: 11,
